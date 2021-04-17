@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap');
+
+* {
+	margin: 0;
+	padding: 1px;
+	box-sizing: border-box;
+}
+
+:root {
+	--very-dark-magenta: hsl(300, 43%, 22%);
+	--soft-pink: hsl(333, 80%, 67%);
+	--dark-grayish-magenta: hsl(303, 10%, 53%);
+	--light-grayish-magenta: hsl(300, 24%, 96%);
+	--white: hsl(0, 0%, 100%);
+}
+
+body {
+	font-size: 15px;
+	font-family: 'Spartan', sans-serif;
+}
+
+header {
+	background-size: contain;
+	background-position: top;
+}
+
+h1 {
+	color: var(--very-dark-magenta);
+}
+
+p {
+	color: var(--dark-grayish-magenta);
+	line-height: 20px;
+}
+
+.review {
+	background-color: var(--light-grayish-magenta);
+	text-align: center;
+}
+
+.review__text {
+	color: var(--very-dark-magenta);
+}
+
+.card {
+	background-color: var(--very-dark-magenta);
+	padding: 24px;
+	border-radius: 15px;
+}
+
+.card__header {
+	display: flex;
+	align-items: center;
+	margin: 15px 0;
+	color: var(--white);
+}
+
+.card__avatar {
+	flex: 0.2;
+	padding-right: 24px;
+	padding-left: 0;
+}
+
+.card__avatar img {
+	width: 100%;
+	border-radius: 50%;
+}
+
+.card__header-content {
+	flex: 0.8;
+	text-align: left;
+}
+
+.card__title {
+	font-size: 13px;
+}
+
+.card__subtitle {
+	font-size: 13px;
+	color: var(--soft-pink);
+}
+
+.card__body p {
+	margin-bottom: 15px;
+	color: var(--white);
+	font-size: 13px;
+	line-height: 22px;
+}
+
+@media (min-width: 375px) {
+	header {
+		margin: 24px;
+		background-image: url(images/bg-pattern-top-mobile.svg);
+		text-align: center;
+	}
+
+	h1 {
+		margin-bottom: 1rem;
+		font-size: 1.5rem;
+		line-height: 1.5rem;
+	}
+	
+	p {
+		font-size: 0.75rem;
+	}
+	
+	section {
+		margin: 24px;
+	}
+	
+	main {
+		margin: 24px;
+		background-image: url(images/bg-pattern-bottom-mobile.svg);
+		background-position: bottom;
+	}
+
+	.review {
+		margin: 15px 0;
+		padding: 15px;
+	}
+
+	.card {
+		max-width: 375px;
+		margin: 15px auto;
+	}
+
+	
+}
+
+@media (max-width: 1440px) {
+	body {
+		display: flex;
+		flex-wrap: wrap;
+		padding: 125px 150px;
+	}
+
+	body > header {
+		flex: 0.5;
+	}
+
+	body > section {
+		flex: 0.5;
+	}
+
+	header {
+		text-align: left;
+	}
+
+	h1 {
+		font-size: 40px;
+		line-height: 40px;
+	}
+
+	p {
+		font-size: 15px;
+		line-height: 25px;
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.review {
+		margin-right: auto;
+	}
+
+	.review:nth-child(2) {
+		margin: auto;
+	}
+
+	.review:nth-child(3) {
+		margin-left: auto;
+		margin-right: 0;
+	}
+
+	.review > * {
+		display: inline;
+	}
+
+	.card {
+		display: inline-block;
+		width: 30%;
+		margin: 0;
+		vertical-align: top;
+	}
+
+	.card:nth-child(2) {
+		margin: 25px 25px 0;
+		
+	}
+
+	.card:nth-child(3) {
+		margin-top: 50px;
+	}
+}
